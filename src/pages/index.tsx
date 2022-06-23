@@ -17,7 +17,7 @@ export default function Home() {
   }
 
   return (
-    <div className={styles.container} onSubmit={handleSubmit}>
+    <form className={styles.container} onSubmit={handleSubmit}>
       <input
         type="text"
         value={email}
@@ -29,6 +29,6 @@ export default function Home() {
         onChange={(e) => setPassword(e.target.value)}
       />
       <button type="submit">Entrar</button>
-    </div>
+    </form>
   );
 }
