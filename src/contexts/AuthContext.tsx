@@ -54,12 +54,12 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
       const { permissions, roles, token, refreshToken } = response.data;
 
-      setCookie(undefined, "nextauth.token", token, {
+      setCookie(null, "nextauth.token", token, {
         maxAge: 60 * 60 * 24 * 7, // 1 week
         path: "/",
       });
 
-      setCookie(undefined, "nextauth.refreshToken", refreshToken, {
+      setCookie(null, "nextauth.refreshToken", refreshToken, {
         maxAge: 60 * 60 * 24 * 7, // 1 week
         path: "/",
       });
